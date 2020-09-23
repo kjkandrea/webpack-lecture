@@ -12,4 +12,8 @@
 
 `^version`(caret) 은 현재 버전과 호환 가능한 주 버전만 바뀌지 않는 버전을 의미한다. 
 
-## test
+## webpack
+
+```
+npm install -D webpack webpack-cli
+```
