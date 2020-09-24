@@ -1,4 +1,3 @@
 module.exports = function myWebpackLoader (content) {
-  console.log('😎 My Webpack Loader SWAG 😎')
-  return content
+  return content.replace('console.log(', 'alert(')
 }
