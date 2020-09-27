@@ -3,7 +3,7 @@ body {
 }
 
 .image-area {
-    width: 200px;
-    height: 246px;
+    width: 246px;
+    height: 200px;
     background-image: url('./app.gif')
 }
