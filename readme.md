@@ -22,6 +22,6 @@ npm install -D webpack webpack-cli
 
 * `css-loader` 를 사용하면 javascript 파일에서 `.css` 파일을 import할 수 있다.
 * `style-loader` 를 사용하면 변환된 css 파일을 해석할 수 있다.
-* `file-loader`
+* `file-loader` 를 사용하면 이미지들 파일 리소스를 해석할 수 있다.
 
 

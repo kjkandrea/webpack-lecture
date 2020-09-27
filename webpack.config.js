@@ -23,7 +23,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.gif$/,
+        test: /\.(jpg|gif)$/,
         loader: 'file-loader',
         options: {
           publicPath: './dist/',
