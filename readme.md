@@ -157,3 +157,11 @@ plugins: [
 ]
 ...
 ```
+
+#### MiniCssExtractPlugin
+
+css 빌드결과물을 파일로 따로 하나 뺀다. `process.env.NODE_ENV`로 분기해서 사용하는듯.
+
+```
+npm install -D mini-css-extract-plugin
+```
