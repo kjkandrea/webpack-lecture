@@ -153,7 +153,7 @@ eval("var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtim
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"582a4adcab6d102baf16d7c5e8314d75.gif\");\n\n//# sourceURL=webpack:///./src/app.gif?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"./dist/app.gif?582a4adcab6d102baf16d7c5e8314d75\");\n\n//# sourceURL=webpack:///./src/app.gif?");
 
 /***/ }),
 
