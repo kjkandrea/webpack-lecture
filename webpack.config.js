@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const childProcess = require('child_process')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -45,6 +46,9 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       "api.domain": JSON.stringify("http://dev.api.domain.com")
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
     })
   ]
 }
