@@ -141,3 +141,19 @@ NODE_ENV=development webpack && open ./dist/index.html
 #### CleanWebpackPlugin
 
 빌드 이전 결과물(dist)을 제거하는 디렉토리 이다.
+
+```
+npm install -D clean-webpack-plugin
+```
+
+``` javascript
+// webpack.config.js
+
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
+...
+plugins: [
+    new CleanWebpackPlugin()
+]
+...
+```
