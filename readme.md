@@ -103,3 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 이런식으로 접근하여 생성한 환경변수를 사용할 수 있다. 
 
+#### HTMLTemplatePlugin
+
+외부 패키지이다. 설치해보자.
+
+```
+npm i -D html-webpack-plugin 
+```
