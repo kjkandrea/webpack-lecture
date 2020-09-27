@@ -29,7 +29,7 @@ module.exports = {
         test: /\.(jpg|gif)$/,
         loader: 'url-loader',
         options: {
-          publicPath: './dist/',
+          publicPath: './',
           name: '[name].[ext]?[hash]',
           limit: 20000, // 20kb
         }
