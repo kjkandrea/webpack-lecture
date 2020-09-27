@@ -110,3 +110,30 @@ document.addEventListener('DOMContentLoaded', () => {
 ```
 npm i -D html-webpack-plugin 
 ```
+
+이 플러그인은 HTML 파일을 후처리하는데 사용한다. 빌드 타임의 값을 넣거나 코드를 압축할수 있다.
+
+이런식으로 정의한 후 EJS로 꺼내쓸 수 있다.
+
+``` javascript
+// webpack.config.js
+
+new HtmlWebpackPlugin({
+    template: './src/index.html',
+    templateParameters: {
+        env: process.env.NODE_ENV === 'development' ? ' - 개발환경' : ''
+    }
+})
+```
+
+``` html
+// index.html
+
+<title>Document<%= env %></title>
+```
+
+```
+NODE_ENV=development webpack && open ./dist/index.html
+```
+
+이렇게하면 html title이 'Document - 개발환경' 이라고 출력되는걸 볼 수 있다.

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack && open ./dist/index.html"
+    "build": "NODE_ENV=development webpack && open ./dist/index.html"
   },
   "author": "",
   "license": "ISC",

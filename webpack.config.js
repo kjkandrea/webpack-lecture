@@ -48,7 +48,10 @@ module.exports = {
       "api.domain": JSON.stringify("http://dev.api.domain.com")
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      templateParameters: {
+        env: process.env.NODE_ENV === 'development' ? ' - 개발환경' : ''
+      }
     })
   ]
 }
