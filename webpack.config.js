@@ -1,5 +1,6 @@
 const path = require('path')
 const MyWebpackPlugin = require('./my-webpack-plugin.js')
+const webpack = require('webpack')
 
 module.exports = {
   mode: 'development',
@@ -35,6 +36,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new MyWebpackPlugin(),
+    new webpack.BannerPlugin({
+      banner: `이것은 배너입니다.`
+    }),
   ]
 }
