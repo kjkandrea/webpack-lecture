@@ -137,3 +137,7 @@ NODE_ENV=development webpack && open ./dist/index.html
 ```
 
 이렇게하면 html title이 'Document - 개발환경' 이라고 출력되는걸 볼 수 있다.
+
+#### CleanWebpackPlugin
+
+빌드 이전 결과물(dist)을 제거하는 디렉토리 이다.
