@@ -17,3 +17,9 @@
 ```
 npm install -D webpack webpack-cli
 ```
+
+## css-loader
+
+css-loader 를 사용하면 javascript 파일에서 `.css` 파일을 import할 수 있다.
+
+
