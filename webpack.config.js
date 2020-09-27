@@ -24,10 +24,11 @@ module.exports = {
       },
       {
         test: /\.(jpg|gif)$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
           publicPath: './dist/',
-          name: '[name].[ext]?[hash]'
+          name: '[name].[ext]?[hash]',
+          limit: 20000, // 20kb
         }
       }
     ]
