@@ -14,16 +14,18 @@ module.exports = {
       {
         test: /\.js$/,
         use: path.resolve('./my-webpack-loader.js')
-      }
-    ]
-  },
-  module: {
-    rules: [
+      },
       {
         test: /\.css$/,
         use: [
           'style-loader',
           'css-loader'
+        ]
+      },
+      {
+        test: /\.gif$/,
+        use: [
+          'file-loader'
         ]
       }
     ]
