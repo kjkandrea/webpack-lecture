@@ -31,6 +31,8 @@ npm install -D webpack webpack-cli
 
 ### 자주 사용하는 플러그인
 
+#### BannerPlugin
+
 dist에 빌드된 결과물에 빌드 정보, 커밋 정보들을 표기하기 위해 사용함.
 
 ``` javascript
@@ -68,4 +70,36 @@ module.exports = {
  */
 ```
 
+#### DefinePlugin
+
+dev, production 등 환경 의존적인 정보를 소스가 아닌 다른곳에서 관리하기 위하여 사용함.
+환경변수를 만들어 어플리케이션에서 사용할 수 있다.
+
+``` javascript
+// webpack.config.js
+
+plugins: [
+    new webpack.DefinePlugin({
+        "api.domain": JSON.stringify("http://dev.api.domain.com")
+    })
+]
+
+```
+
+이렇게 만들면...
+
+``` javascript
+// app.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const preEl = document.createElement('pre')
+  preEl.textContent = `
+    빌드 환경 : ${process.env.NODE_ENV}
+    api 도메인 주소 : ${api.domain}
+  `
+  document.body.prepend(preEl)
+})
+```
+
+이런식으로 접근하여 생성한 환경변수를 사용할 수 있다. 
 

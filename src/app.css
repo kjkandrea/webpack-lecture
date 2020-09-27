@@ -2,6 +2,11 @@ body {
     background-color: lightblue;
 }
 
+pre {
+    background-color: white;
+    border-radius: 8px;
+}
+
 .image-area {
     width: 246px;
     height: 200px;

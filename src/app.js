@@ -3,8 +3,16 @@ import './app.css'
 import nyancat from './nyancat.jpg'
 
 console.log(math.sum(2, 3))
+console.log(process.env.NODE_ENV)
 
 document.addEventListener('DOMContentLoaded', () => {
+  const preEl = document.createElement('pre')
+  preEl.textContent = `
+    빌드 환경 : ${process.env.NODE_ENV}
+    api 도메인 주소 : ${api.domain}
+  `
+  document.body.prepend(preEl)
+
   const imageEl = document.createElement('img')
   imageEl.src = nyancat
   document.body.append(imageEl)
