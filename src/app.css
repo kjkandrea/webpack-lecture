@@ -1,3 +1,9 @@
 body {
     background-color: lightblue;
 }
+
+.image-area {
+    width: 200px;
+    height: 246px;
+    background-image: url('./app.gif')
+}
