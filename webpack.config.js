@@ -51,6 +51,10 @@ module.exports = {
       template: './src/index.html',
       templateParameters: {
         env: process.env.NODE_ENV === 'development' ? ' - 개발환경' : ''
+      },
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true
       }
     })
   ]
