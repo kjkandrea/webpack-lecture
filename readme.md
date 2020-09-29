@@ -185,3 +185,25 @@ npx babel app.js
 코드를 읽고 추상 구문 트리(AST)로 변환하는 단계를 **파싱**이라고 한다. 이것은 빌드 작업을 처리하기에 적합한 자료구조인데 컴파일러 이론에 사용되는 개념이다.
 추상 구문 트리를 변경하는 것이 **변환** 단계이다. 실제로 코드를 변경하는 작업을 한다.
 변경된 결과물을 **출력**하는 것을 마지막으로 바벨은 작업을 완료한다.
+
+### 프리셋
+
+바벨은 몇가지 기본 프리셋을 제공하는데, `preset-env`는 ECMAScript2015+를 변환할 때 사용한다. 사용해보자.
+
+```
+npm install -D @babel/preset-env
+```
+
+``` javascript
+// babel.config.js
+
+module.exports = {
+  presets: [
+    '@babel/preset-env'
+  ]
+}
+```
+
+```
+npx babel app.js
+```
