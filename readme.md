@@ -165,3 +165,23 @@ css 빌드결과물을 파일로 따로 하나 뺀다. `process.env.NODE_ENV`로
 ```
 npm install -D mini-css-extract-plugin
 ```
+
+## babel
+
+```
+npm install -D @babel/core @babel/cli
+```
+
+```
+npx babel app.js
+```
+
+바벨은 세 단계로 빌드를 진행한다.
+
+* 파싱(Parsing)
+* 변환(Transforming)
+* 출력 (Printing)
+
+코드를 읽고 추상 구문 트리(AST)로 변환하는 단계를 **파싱**이라고 한다. 이것은 빌드 작업을 처리하기에 적합한 자료구조인데 컴파일러 이론에 사용되는 개념이다.
+추상 구문 트리를 변경하는 것이 **변환** 단계이다. 실제로 코드를 변경하는 작업을 한다.
+변경된 결과물을 **출력**하는 것을 마지막으로 바벨은 작업을 완료한다.

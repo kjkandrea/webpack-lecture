@@ -25,6 +25,7 @@ module.exports = {
         use: [
           process.env.NODE_ENV === 'production'
           ? MiniCssExtractPlugin.loader
+
           : 'style-loader',
           'css-loader'
         ]
