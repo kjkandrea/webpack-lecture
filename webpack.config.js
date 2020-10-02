@@ -17,6 +17,24 @@ module.exports = {
   devServer: {
     overlay: true,
     stats: "errors-only",
+    before: (app) => {
+      app.get("/api/users", (req, res) => {
+        res.json([
+          {
+            id: 1,
+            name: "Haebogoyang",
+          },
+          {
+            id: 2,
+            name: "Andrea",
+          },
+          {
+            id: 3,
+            name: "Karenin",
+          },
+        ]);
+      });
+    },
   },
   module: {
     rules: [

@@ -340,3 +340,36 @@ npm install -D lint-staged
 ```
 npm install -D webpack-dev-server
 ```
+
+### 목업 데이터 만들기
+
+간혹 개발하다가 api가 아직 개발되어있지 않거나 하였을때 목업 데이터가 필요하다. 어떻게 할까? model에 Promise 만들어서 땜빵하고 나중에 고칠까? 노노노노 다른방법을 써보자
+
+``` javascript
+// webpack.config.js
+
+devServer: {
+  overlay: true,
+  stats: "errors-only",
+  before: (app) => {
+    app.get("/api/users", (req, res) => {
+      res.json([
+        {
+          id: 1,
+          name: "Haebogoyang",
+        },
+        {
+          id: 2,
+          name: "Andrea",
+        },
+        {
+          id: 3,
+          name: "Karenin",
+        },
+      ]);
+    });
+  },
+},
+```
+
+이후 `http://localhost:8080/api/users` 로 접속되면 json 형식 응답을 볼 수 있다. 얏호
