@@ -1,2 +1,3 @@
-console.log('test');
-(function(){})();
+var foo = "";
+
+console.log("");

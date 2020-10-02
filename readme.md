@@ -225,3 +225,47 @@ npx eslint app.js
 ```
 npx eslint app.js --fix
 ```
+
+## prettier
+
+```
+npm install -D prettier
+```
+
+```
+npx prettier app.js
+```
+
+```
+npx prettier app.js --write
+```
+
+## ESlint + prettier
+
+```
+npm install -D eslint-config-prettier
+```
+
+```
+npm install -D eslint-plugin-prettier
+```
+
+``` javascript
+// eslintrc.js
+
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: ["eslint:recommended", "eslint-config-prettier"],
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: "module",
+  },
+  plugins: ["prettier"],
+  rules: {
+    "prettier/prettier": "error",
+  },
+};
+```
