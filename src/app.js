@@ -36,3 +36,5 @@ if (module.hot) {
     UserList.render();
   });
 }
+
+console.log("production 환경에서 console.log 제거 테스트");

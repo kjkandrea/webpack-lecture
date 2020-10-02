@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=development webpack && open ./dist/index.html",
-    "production": "NODE_ENV=production webpack --progress",
+    "production": "NODE_ENV=production webpack --progress &&  open ./dist/index.html",
     "lint": "eslint src --fix",
     "start": "webpack-dev-server --progress"
   },
@@ -47,6 +47,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "prettier": "^2.1.2",
     "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^4.2.2",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",

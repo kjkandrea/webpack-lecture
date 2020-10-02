@@ -403,3 +403,9 @@ npm install -D connect-api-mocker
 ```
 npm install -D optimize-css-assets-webpack-plugin
 ```
+
+### console.log, debugger 제거
+
+```
+npm install -D terser-webpack-plugin
+```
