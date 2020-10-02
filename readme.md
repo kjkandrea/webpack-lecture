@@ -409,3 +409,5 @@ npm install -D optimize-css-assets-webpack-plugin
 ```
 npm install -D terser-webpack-plugin
 ```
+
+### 코드 스플리팅
