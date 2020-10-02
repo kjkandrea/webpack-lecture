@@ -413,3 +413,7 @@ npm install -D terser-webpack-plugin
 ### 코드 스플리팅
 
 ### externals: 서드파티 라이브러리 빌드과정 제외
+
+```
+npm install -D copy-webpack-plugin
+```
