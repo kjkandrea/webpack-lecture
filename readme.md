@@ -269,3 +269,28 @@ module.exports = {
   },
 };
 ```
+
+## 깃 훅 : husky
+
+```
+npm install -D husky
+```
+
+``` json
+// package.json
+...
+"husky": {
+  "hooks": {
+    "pre-commit": "echo \"husky : 이것은 커밋 전에 출력됨\""
+  }
+},
+...
+```
+
+이 후 빈 커밋을 하나 해보면 메시지가 출력됨
+
+```
+git commit --allow-empty -m "sample commit"
+```
+
+이 말인 즉슨 husky pre-commit 훅에 lint 커맨드를 적어넣으면 커밋을 하기전에 수행된단 것이다. 😮
