@@ -385,3 +385,21 @@ npm install -D connect-api-mocker
 ## 핫 모듈 리플레이스먼트
 
 *핫 모듈 리플레이스먼트* 란 변경한 모듈만 화면에서 갈아치우는 멋진 방법이다.
+
+## dist 최적화
+
+ process.env.NODE_ENV mode를 "production"으로 설정하면 자바스크립트 결과물을 최소화 하기 위해 다음 일곱 개 플러그인을 사용한다.
+
+* FlagDependencyUsagePlugin
+* FlagIncludedChunksPlugin
+* ModuleConcatenationPlugin
+* NoEmitOnErrorsPlugin
+* OccurrenceOrderPlugin
+* SideEffectsFlagPlugin
+* TerserPlugin
+
+### css 경량화
+
+```
+npm install -D optimize-css-assets-webpack-plugin
+```

@@ -5,9 +5,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const apiMocker = require("connect-api-mocker");
+const OptimieCSSAssertsPlugin = require("optimize-css-assets-webpack-plugin");
+
+const mode = process.env.NODE_ENV || "development";
 
 module.exports = {
-  mode: "development",
+  mode: mode,
   entry: {
     main: "./src/app.js",
   },
@@ -22,6 +25,9 @@ module.exports = {
       app.use(apiMocker("/api", "./mocks/api"));
     },
     hot: true,
+  },
+  optimization: {
+    minimizer: mode === "production" ? [new OptimieCSSAssertsPlugin()] : [],
   },
   module: {
     rules: [
