@@ -22,3 +22,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   UserList.render();
   FormView.render();
 });
+
+if (module.hot) {
+  console.log("HMR working...");
+
+  module.hot.accept("./views/FormView.js", () => {
+    console.log("HMR FormView modify");
+  });
+}
