@@ -2,6 +2,7 @@ import * as math from "./utils/mathUtil.js";
 import "./app.css";
 import nyancat from "./nyancat.jpg";
 import UserList from "./views/UserList.js";
+import FormView from "./views/FormView.js";
 
 console.log(math.sum(2, 3));
 console.log(process.env.NODE_ENV);
@@ -19,4 +20,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.body.append(imageEl);
 
   UserList.render();
+  FormView.render();
 });

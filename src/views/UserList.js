@@ -15,7 +15,7 @@ class UserList {
     const template = document.createElement("ul");
     template.innerHTML = this.users
       .map((user) => {
-        return `<li><strong>${user.id}</strong> : ${user.name}</li>`;
+        return `<li><strong>${user.id} : ${user.name}</li>`;
       })
       .join("");
 

@@ -381,3 +381,7 @@ devServer: {
 ```
 npm install -D connect-api-mocker
 ```
+
+## 핫 모듈 리플레이스먼트
+
+*핫 모듈 리플레이스먼트* 란 변경한 모듈만 화면에서 갈아치우는 멋진 방법이다.
