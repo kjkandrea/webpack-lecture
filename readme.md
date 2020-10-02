@@ -294,3 +294,22 @@ git commit --allow-empty -m "sample commit"
 ```
 
 이 말인 즉슨 husky pre-commit 훅에 lint 커맨드를 적어넣으면 커밋을 하기전에 수행된단 것이다. 😮
+
+고쳐지지 않는 사항이 있다면? 커밋이 되지 않는다.
+
+``` json
+// package.json
+
+"husky": {
+  "hooks": {
+    "pre-commit": "eslint src --fix"
+  }
+},
+```
+
+그래 여기까진 좋은데.. src 하위에 파일이 프로젝트가 진행되면서 수백 개로 늘어난다면? src 디렉터리내의 모든 파일을 일일히 검사해야되니 커밋까지 엄청난 시간이 소요되겠지? 이 때에 우리는 다음과 같은 꿈을 꿀 것이다.
+
+> 내가 커밋한 소스들만 lint를 돌려 자동화를 하는 방법이 없을까?
+
+### lint-staged
+
