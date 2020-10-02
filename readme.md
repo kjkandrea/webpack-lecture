@@ -333,4 +333,10 @@ npm install -D lint-staged
 
 이렇게 세팅한다.
 
-### 
+## 웹팩 개발 서버
+
+### webpack-dev-server
+
+```
+npm install -D webpack-dev-server
+```

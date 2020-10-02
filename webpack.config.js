@@ -14,6 +14,10 @@ module.exports = {
     path: path.resolve("./dist"),
     filename: "[name].js",
   },
+  devServer: {
+    overlay: true,
+    stats: "errors-only",
+  },
   module: {
     rules: [
       {
