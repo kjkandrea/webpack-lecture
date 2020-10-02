@@ -12,14 +12,12 @@ class UserList {
   }
 
   domContentRender() {
-    const template = document.createElement("ul");
+    const template = document.getElementById("user-list");
     template.innerHTML = this.users
       .map((user) => {
         return `<li><strong>${user.id} : ${user.name}</li>`;
       })
       .join("");
-
-    document.body.append(template);
   }
 }
 
