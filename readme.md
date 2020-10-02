@@ -215,6 +215,10 @@ npm install -D eslint
 ```
 
 ```
+npx eslint --init
+```
+
+```
 npx eslint app.js
 ```
 
