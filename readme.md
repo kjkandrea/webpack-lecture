@@ -313,3 +313,24 @@ git commit --allow-empty -m "sample commit"
 
 ### lint-staged
 
+```
+npm install -D lint-staged
+```
+
+``` json
+// package.json
+...
+"husky": {
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
+},
+"lint-staged": {
+  "*.js": "eslint --fix"
+},
+...
+```
+
+이렇게 세팅한다.
+
+### 

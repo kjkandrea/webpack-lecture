@@ -11,8 +11,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "eslint src --fix"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
   },
   "author": "",
   "license": "ISC",
@@ -36,6 +39,7 @@
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.5.0",
     "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "lite-server": "^2.5.4",
     "mini-css-extract-plugin": "^0.11.2",
     "prettier": "^2.1.2",
