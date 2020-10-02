@@ -207,3 +207,17 @@ module.exports = {
 ```
 npx babel app.js
 ```
+
+## ESlint
+
+```
+npm install -D eslint
+```
+
+```
+npx eslint app.js
+```
+
+```
+npx eslint app.js --fix
+```
