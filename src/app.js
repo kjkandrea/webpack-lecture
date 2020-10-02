@@ -1,7 +1,7 @@
 import * as math from "./utils/mathUtil.js";
 import "./app.css";
 import nyancat from "./nyancat.jpg";
-import axios from "axios";
+import UserList from "./views/UserList.js";
 
 console.log(math.sum(2, 3));
 console.log(process.env.NODE_ENV);
@@ -18,6 +18,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   imageEl.src = nyancat;
   document.body.append(imageEl);
 
-  const { users } = await axios.get("/api/users");
-  console.log(users);
+  UserList.render();
 });
