@@ -373,3 +373,11 @@ devServer: {
 ```
 
 이후 `http://localhost:8080/api/users` 로 접속되면 json 형식 응답을 볼 수 있다. 얏호
+
+### connect-api-mocker
+
+라는 패키지를 이용하여 좀 더 깔끔하게 구성해보자.
+
+```
+npm install -D connect-api-mocker
+```
