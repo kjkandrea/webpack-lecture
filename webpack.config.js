@@ -14,7 +14,6 @@ module.exports = {
   mode: mode,
   entry: {
     main: "./src/app.js",
-    view: "./src/views/UserList.js",
   },
   output: {
     path: path.resolve("./dist"),

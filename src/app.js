@@ -1,7 +1,6 @@
 import * as math from "./utils/mathUtil.js";
 import "./app.css";
 import nyancat from "./nyancat.jpg";
-import UserList from "./views/UserList.js";
 import FormView from "./views/FormView.js";
 
 console.log(math.sum(2, 3));
@@ -19,7 +18,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   imageEl.src = nyancat;
   document.body.append(imageEl);
 
-  UserList.render();
+  import(/* webpackChunkName: "view" */ "./views/UserList.js").then(
+    (module) => {
+      const result = module.default;
+      result.render();
+    }
+  );
   FormView.render();
 });
 
@@ -33,7 +37,7 @@ if (module.hot) {
 
   module.hot.accept("./views/UserList.js", () => {
     console.log("HMR UserList modify");
-    UserList.render();
+    // UserList.render();
   });
 }
 
